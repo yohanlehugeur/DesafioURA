@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>URI 3190</title>
+
+   <script type="text/javascript">
+    var lojas=[];
+    var quantidade_de_testes = prompt("quantas vezes que simular o teste: ");
+
+	while(quantidade_de_testes > 0){    
+		var quantidade_de_lojas  = prompt("Informe a quantidade de lojas que serão visitadas:");
+		
+		for(var i = 0; i < quantidade_de_lojas; i ++){
+	    	lojas[i] = prompt("Informe o numero da loja: ");
+    	}
+    	lojas.sort((a, b) => a - b);//teste de ordenação
+    	console.log(lojas); //validando se está salvando corretamente 
+    	var meio_var = parseInt(quantidade_de_lojas/2);
+    	console.log(meio_var);
+    	//var caminhada = 0;
+    	
+    	
+    	var caminhada = (lojas[quantidade_de_lojas - 1] - lojas[meio_var]) + (lojas[meio_var] - lojas[0]);
+    	caminhada = caminhada * 2;
+    	console.log(caminhada);
+    	alert("O valor do percurso é: " + caminhada);
+	    quantidade_de_testes = quantidade_de_testes - 1;
+	}
+
+	//FUNÇÃO 1: SELECT P.codprof, H.numhoras from PROFESSOR P JOIN PROFTURMA PT JOIN TURMA T JOIN HORARIO H where P.coddept == H.coddepto
+
+	//
+   </script>
+
+ </head>
+</html>
+
+
